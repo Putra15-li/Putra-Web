@@ -1,0 +1,193 @@
+/* Reset beberapa default styling browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling umum */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #3d5d68; /* Warna hijau tua */
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-text {
+    flex: 1;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.animated-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 1.2em; /* Menyesuaikan tinggi elemen teks */
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: fadeInOut 9s infinite;
+}
+
+.text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.text:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.text:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-list a:hover {
+    background: #004d40; /* Warna latar belakang saat hover */
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #fff;
+    margin-left: 20px;
+}
+
+main {
+    padding: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #97dff9; /* Garis bawah berwarna hijau */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projects ul li {
+    background: #e0f2f1; /* Warna hijau muda */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact a {
+    color: #3d5d68;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #3d5d68;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media queries untuk tampilan mobile */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 60px;
+        height: 60px;
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .projects ul li {
+        font-size: 14px;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+}
+
+
